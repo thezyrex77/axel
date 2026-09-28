@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProApp Store - Solusi Aplikasi Bisnis Modern & Profesional</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Inter & Lucide Icons / FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            900: '#312e81',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .qris-scanner-line {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: #ef4444;
+            box-shadow: 0 0 8px #ef4444;
+            animation: scan 2s infinite ease-in-out;
+        }
+        @keyframes scan {
+            0%, 100% { top: 0%; }
+            50% { top: 100%; }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
+
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-400 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-brand-500/30">
+                    <i class="fa-solid fa-bolt-lightning"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-extrabold tracking-tight bg-gradient-to-r from-slate-900 to-brand-700 bg-clip-text text-transparent">ProApp<span class="text-brand-600">.</span></span>
+                    <span class="block text-[10px] text-slate-400 font-medium uppercase tracking-widest">Official Store</span>
+                </div>
+            </div>
+            
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                <a href="#fitur" class="hover:text-brand-600 transition">Fitur Utama</a>
+                <a href="#harga" class="hover:text-brand-600 transition">Pilihan Paket</a>
+                <a href="#qris-info" class="hover:text-brand-600 transition">Cara Bayar QRIS</a>
+                <a href="#testimoni" class="hover:text-brand-600 transition">Testimoni</a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <a href="#pesan" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-brand-600 text-white font-medium text-sm shadow-lg shadow-brand-500/25 hover:bg-brand-700 transition active:scale-95">
+                    <i class="fa-solid fa-cart-shopping mr-2"></i> Beli Sekarang
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-32 bg-gradient-to-b from-white via-indigo-50/30 to-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-brand-50 border border-brand-100 text-brand-700 text-xs font-semibold mb-6 animate-pulse">
+                        <i class="fa-solid fa-shield-halved text-brand-600"></i>
+                        <span>100% Aman, Terpercaya & Resmi Bergaransi</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15] mb-6">
+                        Tingkatkan Bisnis Anda dengan <span class="bg-gradient-to-r from-brand-600 to-indigo-500 bg-clip-text text-transparent">Aplikasi Super Pintar</span>
+                    </h1>
+                    <p class="text-lg text-slate-600 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Solusi digital all-in-one untuk automasi manajemen toko, kasir, laporan keuangan, dan pelanggan dalam satu genggaman. Siap pakai & bebas ribet.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-3 sm:space-y-0 sm:space-x-4">
+                        <a href="#harga" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand-600 text-white font-semibold shadow-xl shadow-brand-500/30 hover:bg-brand-700 transition flex items-center justify-center group">
+                            <span>Pilih Paket Aplikasi</span>
+                            <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="#qris-info" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white border border-slate-200 text-slate-700 font-semibold hover:bg-slate-50 transition flex items-center justify-center">
+                            <i class="fa-solid fa-qrcode mr-2 text-brand-600"></i> Lihat Panduan QRIS
+                        </a>
+                    </div>
+                    <div class="mt-10 grid grid-cols-3 gap-6 pt-8 border-t border-slate-200/60 text-left">
+                        <div>
+                            <div class="text-2xl font-bold text-slate-900">5.000+</div>
+                            <div class="text-xs text-slate-500 mt-0.5">Pengguna Aktif</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold text-slate-900">99.9%</div>
+                            <div class="text-xs text-slate-500 mt-0.5">Uptime Server</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold text-slate-900">24/7</div>
+                            <div class="text-xs text-slate-500 mt-0.5">Dukungan Tim</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Illustration / Mockup -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none bg-gradient-to-tr from-brand-600 to-indigo-400 p-2 rounded-3xl shadow-2xl">
+                        <div class="bg-white rounded-2xl p-6 shadow-inner">
+                            <div class="flex items-center justify-between mb-4 pb-4 border-b border-slate-100">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-10 h-10 rounded-full bg-brand-50 flex items-center justify-center text-brand-600">
+                                        <i class="fa-solid fa-mobile-screen-button text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-slate-900 text-sm">Dashboard ProApp</h4>
+                                        <p class="text-xs text-emerald-600 font-medium flex items-center">
+                                            <span class="w-2 h-2 rounded-full bg-emerald-500 inline-block mr-1.5 animate-ping"></span> Live System Active
+                                        </p>
+                                    </div>
+                                </div>
+                                <span class="px-2.5 py-1 bg-emerald-50 text-emerald-700 text-xs font-semibold rounded-lg">Resmi v3.2</span>
+                            </div>
+
+                            <div class="space-y-3">
+                                <div class="p-3 bg-slate-50 rounded-xl flex items-center justify-between">
+                                    <div class="flex items-center space-x-3">
+                                        <div class="w-8 h-8 rounded-lg bg-indigo-100 text-brand-600 flex items-center justify-center text-sm font-bold">
+                                            <i class="fa-solid fa-chart-pie"></i>
+                                        </div>
+                                        <div>
+                                            <div class="text-xs font-semibold text-slate-800">Penjualan Hari Ini</div>
+                                            <div class="text-[10px] text-slate-400">Update real-time</div>
+                                        </div>
+                                    </div>
+                                    <span class="text-sm font-bold text-slate-900">Rp 4.850.000</span>
+                                </div>
+                                <div class="p-3 bg-slate-50 rounded-xl flex items-center justify-between">
+                                    <div class="flex items-center space-x-3">
+                                        <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center text-sm font-bold">
+                                            <i class="fa-solid fa-users"></i>
+                                        </div>
+                                        <div>
+                                            <div class="text-xs font-semibold text-slate-800">Pelanggan Baru</div>
+                                            <div class="text-[10px] text-slate-400">Total member</div>
+                                        </div>
+                                    </div>
+                                    <span class="text-sm font-bold text-slate-900">+42 Orang</span>
+                                </div>
+                            </div>
+
+                            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+                                <span>Status Lisensi:</span>
+                                <span class="font-bold text-brand-600 bg-brand-50 px-2 py-0.5 rounded">Lifetime / Selamanya</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="fitur" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-brand-600 mb-3">Keunggulan Sistem</h2>
+                <h3 class="text-3xl font-extrabold text-slate-900 tracking-tight">Semua yang Anda Butuhkan dalam Satu Aplikasi</h3>
+                <p class="text-slate-600 mt-4 text-base">Dirancang khusus untuk membantu mengoptimalkan operasional usaha Anda dengan fitur-fitur mutakhir.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-xl hover:border-brand-200 transition group">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-600 text-white flex items-center justify-center text-2xl mb-6 shadow-lg shadow-brand-500/30 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-gauge-high"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Dashboard Super Cepat</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Pantau seluruh transaksi, stok barang, dan grafik keuntungan secara real-time dari perangkat apa pun.
+                    </p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-xl hover:border-brand-200 transition group">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-600 text-white flex items-center justify-center text-2xl mb-6 shadow-lg shadow-emerald-500/30 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-qrcode"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Integrasi QRIS Otomatis</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Terima pembayaran dari seluruh e-wallet (GoPay, OVO, DANA, ShopeePay) & m-Banking dengan mudah dan aman.
+                    </p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-xl hover:border-brand-200 transition group">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-600 text-white flex items-center justify-center text-2xl mb-6 shadow-lg shadow-amber-500/30 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Support & Update Selamanya</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Dapatkan pembaruan fitur berkala gratis tanpa biaya langganan bulanan serta panduan instalasi lengkap.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="harga" class="py-20 bg-slate-50 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-brand-600 mb-3">Pilihan Paket</h2>
+                <h3 class="text-3xl font-extrabold text-slate-900 tracking-tight">Investasi Terbaik untuk Bisnis Anda</h3>
+                <p class="text-slate-600 mt-4 text-base">Pilih paket aplikasi yang sesuai dengan skala dan kebutuhan bisnis Anda saat ini.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+                <!-- Paket Basic -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between hover:shadow-lg transition">
+                    <div>
+                        <div class="inline-block px-3 py-1 rounded-full bg-slate-100 text-slate-700 font-semibold text-xs mb-4">STARTER</div>
+                        <h4 class="text-2xl font-extrabold text-slate-900 mb-2">Paket Basic</h4>
+                        <p class="text-slate-500 text-sm mb-6">Cocok untuk UMKM pemula yang baru merintis bisnis digital.</p>
+                        <div class="mb-6 pb-6 border-b border-slate-100">
+                            <span class="text-4xl font-extrabold text-slate-900">Rp 149k</span>
+                            <span class="text-slate-400 text-sm"> / sekali bayar</span>
+                        </div>
+                        <ul class="space-y-3 text-sm text-slate-600 mb-8">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-3"></i> 1 Hak Akses Perangkat</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-3"></i> Fitur Kasir & Transaksi</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-3"></i> Laporan Keuangan Bulanan</li>
+                            <li class="flex items-center text-slate-300"><i class="fa-solid fa-xmark text-slate-300 mr-3"></i> Multi-User Staff</li>
+                            <li class="flex items-center text-slate-300"><i class="fa-solid fa-xmark text-slate-300 mr-3"></i> Support Prioritas</li>
+                        </ul>
+                    </div>
+                    <button onclick="selectPackage('Paket Basic', 149000)" class="w-full py-3.5 rounded-xl bg-slate-100 text-slate-800 font-semibold text-sm hover:bg-slate-200 transition">
+                        Pilih Paket Basic
+                    </button>
+                </div>
+
+                <!-- Paket Pro (Featured) -->
+                <div class="bg-white rounded-3xl p-8 border-2 border-brand-600 shadow-xl flex flex-col justify-between relative">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-600 text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-md uppercase tracking-wider">
+                        Paling Laris 🔥
+                    </div>
+                    <div>
+                        <div class="inline-block px-3 py-1 rounded-full bg-brand-50 text-brand-700 font-semibold text-xs mb-4">PROFESSIONAL</div>
+                        <h4 class="text-2xl font-extrabold text-slate-900 mb-2">Paket Pro Bisnis</h4>
+                        <p class="text-slate-500 text-sm mb-6">Solusi lengkap untuk toko berkembang dengan fitur automasi penuh.</p>
+                        <div class="mb-6 pb-6 border-b border-slate-100">
+                            <span class="text-4xl font-extrabold text-brand-600">Rp 299k</span>
+                            <span class="text-slate-400 text-sm"> / sekali bayar</span>
+                        </div>
+                        <ul class="space-y-3 text-sm text-slate-700 mb-8">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-3"></i> 3 Hak Akses Perangkat</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-3"></i> Fitur Kasir & Manajemen Stok</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-3"></i> Laporan Keuangan & Grafik Lengkap</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-3"></i> Sistem QRIS Pembayaran</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-3"></i> Update Gratis Selamanya</li>
+                        </ul>
+                    </div>
+                    <button onclick="selectPackage('Paket Pro Bisnis', 299000)" class="w-full py-3.5 rounded-xl bg-brand-600 text-white font-semibold text-sm shadow-lg shadow-brand-500/30 hover:bg-brand-700 transition">
+                        Pilih Paket Pro
+                    </button>
+                </div>
+
+                <!-- Paket Enterprise -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between hover:shadow-lg transition">
+                    <div>
+                        <div class="inline-block px-3 py-1 rounded-full bg-slate-100 text-slate-700 font-semibold text-xs mb-4">ENTERPRISE</div>
+                        <h4 class="text-2xl font-extrabold text-slate-900 mb-2">Paket Ultimate</h4>
+                        <p class="text-slate-500 text-sm mb-6">Untuk perusahaan besar dengan cabang banyak & custom fitur.</p>
+                        <div class="mb-6 pb-6 border-b border-slate-100">
+                            <span class="text-4xl font-extrabold text-slate-900">Rp 599k</span>
+                            <span class="text-slate-400 text-sm"> / sekali bayar</span>
+                        </div>
+                        <ul class="space-y-3 text-sm text-slate-600 mb-8">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-3"></i> Unlimited Perangkat / Staff</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-3"></i> Semua Fitur Pro & Custom Add-on</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-3"></i> Integrasi API WhatsApp Gateway</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-3"></i> Pendampingan Instalasi 1-on-1</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-3"></i> Support VIP 24/7</li>
+                        </ul>
+                    </div>
+                    <button onclick="selectPackage('Paket Ultimate', 599000)" class="w-full py-3.5 rounded-xl bg-slate-100 text-slate-800 font-semibold text-sm hover:bg-slate-200 transition">
+                        Pilih Paket Ultimate
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="qris-info" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-semibold mb-4">
+                        <i class="fa-solid fa-bolt text-emerald-600"></i>
+                        <span>Pembayaran Cepat & Otomatis</span>
+                    </div>
+                    <h3 class="text-3xl font-extrabold text-slate-900 tracking-tight mb-4">
+                        Cara Bayar Menggunakan QRIS
+                    </h3>
+                    <p class="text-slate-600 mb-6 text-sm leading-relaxed">
+                        QRIS (Quick Response Code Indonesian Standard) menyatukan berbagai macam QR code dari berbagai aplikasi pembayaran digital seperti BCA, Mandiri, BRI, BNI, GoPay, OVO, DANA, dan LinkAja.
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">1</div>
+                            <div>
+                                <h5 class="font-bold text-slate-900 text-sm">Pilih Paket & Isi Form Order</h5>
+                                <p class="text-xs text-slate-500 mt-0.5">Tentukan paket pilihan Anda di bawah dan lengkapi data pemesanan.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">2</div>
+                            <div>
+                                <h5 class="font-bold text-slate-900 text-sm">Scan QRIS di Bawah Ini</h5>
+                                <p class="text-xs text-slate-500 mt-0.5">Buka aplikasi m-Banking atau E-Wallet Anda, lalu scan QR Code QRIS resmi kami.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">3</div>
+                            <div>
+                                <h5 class="font-bold text-slate-900 text-sm">Kirim Bukti via WhatsApp</h5>
+                                <p class="text-xs text-slate-500 mt-0.5">Klik tombol kirim pesanan otomatis untuk mengirim detail & bukti transfer ke WhatsApp admin.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive QRIS Mockup Card -->
+                <div class="lg:col-span-6 flex justify-center">
+                    <div class="w-full max-w-sm bg-gradient-to-b from-red-600 to-red-700 rounded-3xl p-6 text-white shadow-2xl relative overflow-hidden">
+                        <!-- Header QRIS -->
+                        <div class="flex justify-between items-center mb-6">
+                            <div>
+                                <span class="text-xs tracking-widest font-bold uppercase block text-red-200">QRIS NASIONAL</span>
+                                <h4 class="text-xl font-black">QUICK RESPONSE</h4>
+                            </div>
+                            <div class="bg-white text-red-600 font-extrabold text-xs px-2.5 py-1 rounded-md shadow">
+                                RESMI
+                            </div>
+                        </div>
+
+                        <!-- QR Code Mockup Area -->
+                        <div class="bg-white rounded-2xl p-6 text-slate-900 text-center relative shadow-inner">
+                            <div class="absolute inset-x-0 top-0 overflow-hidden h-full pointer-events-none opacity-20">
+                                <div class="qris-scanner-line"></div>
+                            </div>
+                            <div class="text-xs font-bold text-slate-400 mb-2 uppercase">NMID: ID1029384756891</div>
+                            <div class="bg-slate-100 p-4 rounded-xl inline-block border-2 border-dashed border-slate-300 mb-3 relative">
+                                <!-- SVG QR Code Simulation -->
+                                <svg class="w-44 h-44 mx-auto text-slate-900" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M2,2H10V10H2V2M4,4V8H8V4H4M14,2H22V10H14V2M16,4V8H20V4H16M2,14H10V22H2V14M4,16V20H8V16H4M18,14V18H22V14H18M14,18H16V22H14V18M18,20H22V22H18V20M12,2H14V6H12V2M12,8H14V12H12V8M6,12H8V14H6V12M16,12H20V14H16V12M12,14H14V18H12V14M10,12H12V14H10V12M10,18H12V22H10V18Z"/>
+                                </svg>
+                            </div>
+                            <div class="text-xs font-semibold text-slate-700">PT PRODIGI NUSANTARA SEJAHTERA</div>
+                            <div id="qris-dynamic-amount" class="text-lg font-extrabold text-brand-600 mt-1">Pilih Paket di Bawah</div>
+                        </div>
+
+                        <div class="mt-6 text-center text-xs text-red-100 flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-circle-check text-white"></i>
+                            <span>Didukung BCA, Mandiri, OVO, DANA, ShopeePay, dll</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pesan" class="py-20 bg-slate-50 border-t border-slate-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-slate-200">
+                <div class="text-center max-w-xl mx-auto mb-10">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-600 mb-2 block">Formulir Pesanan</span>
+                    <h3 class="text-3xl font-extrabold text-slate-900 tracking-tight">Pesan Aplikasi Sekarang</h3>
+                    <p class="text-slate-600 text-sm mt-2">Isi data di bawah ini dengan benar. Pesanan akan otomatis terformat dan terkirim langsung ke WhatsApp Admin.</p>
+                </div>
+
+                <form id="orderForm" onsubmit="sendWhatsAppOrder(event)" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Nama Lengkap <span class="text-red-500">*</span></label>
+                            <input type="text" id="buyerName" required placeholder="Contoh: Budi Santoso" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Nomor WhatsApp <span class="text-red-500">*</span></label>
+                            <input type="tel" id="buyerPhone" required placeholder="Contoh: 081234567890" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition text-sm">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Pilih Paket Aplikasi <span class="text-red-500">*</span></label>
+                            <select id="selectedPackage" onchange="updatePackageSelection()" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition text-sm bg-white">
+                                <option value="Paket Basic" data-price="149000">Paket Basic - Rp 149.000</option>
+                                <option value="Paket Pro Bisnis" data-price="299000" selected>Paket Pro Bisnis - Rp 299.000</option>
+                                <option value="Paket Ultimate" data-price="599000">Paket Ultimate - Rp 599.000</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Metode Pembayaran <span class="text-red-500">*</span></label>
+                            <select id="paymentMethod" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition text-sm bg-white">
+                                <option value="QRIS (Scan All Bank / E-Wallet)">QRIS (Scan All Bank / E-Wallet)</option>
+                                <option value="Transfer Bank BCA">Transfer Bank BCA</option>
+                                <option value="Transfer Bank Mandiri">Transfer Bank Mandiri</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">Catatan Tambahan (Opsional)</label>
+                        <textarea id="buyerNote" rows="3" placeholder="Nama toko atau catatan khusus untuk lisensi..." class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition text-sm"></textarea>
+                    </div>
+
+                    <!-- Order Summary Box -->
+                    <div class="p-4 rounded-2xl bg-indigo-50/50 border border-indigo-100 flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-slate-500 block">Total Pembayaran:</span>
+                            <span id="summaryPriceText" class="text-2xl font-black text-brand-600">Rp 299.000</span>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-xs bg-emerald-100 text-emerald-800 font-bold px-2.5 py-1 rounded-full">Diskon Aktif 50%</span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 rounded-xl bg-emerald-600 text-white font-bold text-base shadow-xl shadow-emerald-500/30 hover:bg-emerald-700 transition flex items-center justify-center space-x-2">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        <span>Kirim Pesanan ke WhatsApp Admin</span>
+                    </button>
+                    <p class="text-center text-xs text-slate-400">Dengan menekan tombol di atas, Anda akan diarahkan otomatis ke aplikasi WhatsApp.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between text-sm">
+            <div class="flex items-center space-x-3 mb-4 sm:mb-0">
+                <div class="w-8 h-8 rounded-lg bg-brand-600 text-white flex items-center justify-center font-bold">
+                    <i class="fa-solid fa-bolt-lightning text-xs"></i>
+                </div>
+                <span class="text-white font-bold text-base">ProApp Store</span>
+            </div>
+            <p>&copy; 2026 ProApp Store. Hak Cipta Dilindungi Undang-Undang.</p>
+            <div class="flex space-x-6 mt-4 sm:mt-0 text-slate-400">
+                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Nomor WhatsApp Penjual (Ganti dengan nomor WhatsApp aktif Anda dalam format internasional tanpa angka 0 di depan atau dengan 62)
+        const SELLER_WHATSAPP = "6281234567890";
+
+        // Update harga dan simulasi QRIS saat paket dipilih
+        function selectPackage(packageName, price) {
+            const select = document.getElementById('selectedPackage');
+            for (let i = 0; i < select.options.length; i++) {
+                if (select.options[i].value === packageName) {
+                    select.selectedIndex = i;
+                    break;
+                }
+            }
+            updatePackageSelection();
+            
+            // Scroll otomatis ke form pemesanan
+            document.getElementById('pesan').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function updatePackageSelection() {
+            const select = document.getElementById('selectedPackage');
+            const selectedOption = select.options[select.selectedIndex];
+            const price = selectedOption.getAttribute('data-price');
+            const formattedPrice = Number(price).toLocaleString('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 });
+            
+            // Update UI Total Harga
+            document.getElementById('summaryPriceText').innerText = formattedPrice;
+            document.getElementById('qris-dynamic-amount').innerText = `Nominal: ${formattedPrice}`;
+        }
+
+        // Fungsi format order otomatis ke WhatsApp
+        function sendWhatsAppOrder(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('buyerName').value.trim();
+            const phone = document.getElementById('buyerPhone').value.trim();
+            const select = document.getElementById('selectedPackage');
+            const packageName = select.value;
+            const priceText = document.getElementById('summaryPriceText').innerText;
+            const paymentMethod = document.getElementById('paymentMethod').value;
+            const note = document.getElementById('buyerNote').value.trim() || '-';
+
+            // Format Pesan WhatsApp yang rapi dan profesional
+            const message = 
+`Halo Admin ProApp Store, saya ingin memesan aplikasi dengan detail berikut:
+
+*--- DETAIL PESANAN ---*
+👤 Nama: *${name}*
+📱 No. WhatsApp: *${phone}*
+📦 Paket: *${packageName}*
+💰 Total Harga: *${priceText}*
+💳 Metode Bayar: *${paymentMethod}*
+📝 Catatan: *${note}*
+
+Mohon info selanjutnya untuk proses pembayaran dan pengiriman file aplikasinya. Terima kasih!`;
+
+            // Encode pesan untuk URL WhatsApp
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappURL = `https://wa.me/${SELLER_WHATSAPP}?text=${encodedMessage}`;
+
+            // Buka link WhatsApp di tab baru
+            window.open(whatsappURL, '_blank');
+        }
+
+        // Inisialisasi awal saat halaman dimuat
+        window.onload = function() {
+            updatePackageSelection();
+        };
+    </script>
+</body>
+</html>
